@@ -1,6 +1,6 @@
 class Hero {
   String name;
-  int hp = 0;
+  int hp;
 
-  Hero(this.name, {required this.hp});
+  Hero({required this.name, this.hp = 0});
 }

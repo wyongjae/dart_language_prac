@@ -3,9 +3,9 @@ import 'dart:math';
 import 'package:dart_language_prac/hero/hero.dart';
 
 void main() {
-  Cleric cleric1 = Cleric('아서스', hp: 40, mp: 5);
-  Cleric cleric2 = Cleric('아서스', hp: 35);
-  Cleric cleric3 = Cleric('아서스');
+  Cleric cleric1 = Cleric(name: '아서스', hp: 40, mp: 5);
+  Cleric cleric2 = Cleric(name: '아서스', hp: 35);
+  Cleric cleric3 = Cleric(name: '아서스');
 }
 
 class Cleric extends Hero {
@@ -13,8 +13,8 @@ class Cleric extends Hero {
   static const int maxMp = 10;
   int mp;
 
-  Cleric(
-    super.name, {
+  Cleric({
+    required super.name,
     super.hp = maxHp,
     this.mp = maxMp,
   });
