@@ -9,9 +9,10 @@ void main() {
 }
 
 class Cleric extends Hero {
-  static const int maxHp = 50;
+  static const double maxHp = 50;
   static const int maxMp = 10;
   int mp;
+  final _random = Random();
 
   Cleric({
     required super.name,
@@ -21,21 +22,25 @@ class Cleric extends Hero {
 
   void selfAid() {
     // MP 5를 소비하여 자신의 HP를 최대 HP 까지 회복한다
-    mp = mp - 5;
-    hp = maxHp;
+    if (mp > 5) {
+      mp -= 5;
+      hp = maxHp;
+    } else {
+      print('MP가 부족합니다');
+    }
   }
 
   int pray(int prayTime) {
     // 기도한 시간(prayTime) + 0 ~ 2 포인트 만큼 자신의 MP를 회복한다
     // 최대 MP 이상으로는 회복할 수 없다
-    final random = Random();
-    int randomNumber = random.nextInt(2);
+    // 실제 회복한 값을 리턴한다
+    int charMp = mp;
+    int randomNumber = _random.nextInt(3);
 
-    mp = mp + (prayTime + randomNumber);
-    if (mp > maxMp) {
-      mp = maxMp;
-    }
+    mp += (prayTime + randomNumber);
 
-    return mp;
+    mp = min(mp, maxMp);
+
+    return mp - charMp;
   }
 }
