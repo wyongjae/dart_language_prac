@@ -3,21 +3,25 @@ import 'dart:math';
 import 'package:dart_language_prac/hero/hero.dart';
 
 void main() {
-  Cleric cleric1 = Cleric(name: '아서스', hp: 40, mp: 5);
-  Cleric cleric2 = Cleric(name: '아서스', hp: 35);
-  Cleric cleric3 = Cleric(name: '아서스');
+  Cleric cleric1 = Cleric('아서스', hp: 40, mp: 5);
+  Cleric cleric2 = Cleric('아서스', hp: 35);
+  Cleric cleric3 = Cleric('아서스');
 }
 
 class Cleric extends Hero {
-  final int maxHp = 50;
-  final int maxMp = 10;
-  int? mp = 10;
+  static const int maxHp = 50;
+  static const int maxMp = 10;
+  int mp;
 
-  Cleric({required super.name, super.hp, this.mp});
+  Cleric(
+    super.name, {
+    super.hp = maxHp,
+    this.mp = maxMp,
+  });
 
   void selfAid() {
     // MP 5를 소비하여 자신의 HP를 최대 HP 까지 회복한다
-    mp = mp! - 5;
+    mp = mp - 5;
     hp = maxHp;
   }
 
@@ -27,11 +31,11 @@ class Cleric extends Hero {
     final random = Random();
     int randomNumber = random.nextInt(2);
 
-    mp = mp! + (prayTime + randomNumber);
-    if (mp! > maxMp) {
+    mp = mp + (prayTime + randomNumber);
+    if (mp > maxMp) {
       mp = maxMp;
     }
 
-    return mp!;
+    return mp;
   }
 }
