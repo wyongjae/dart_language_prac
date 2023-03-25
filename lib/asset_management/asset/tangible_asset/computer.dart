@@ -1,7 +1,7 @@
 import 'package:dart_language_prac/asset_management/asset/tangible_asset/tangible_asset.dart';
 
 void main() {
-  Computer computer = Computer('데스크탑', 1000000, '검정', '삼성');
+  Computer computer = Computer('데스크탑', 1000000, '검정', '삼성', 20);
 
   print(computer.name);
   computer.getName('노트북');
@@ -13,7 +13,10 @@ class Computer extends TangibleAsset {
 
   String get makerName => _makerName;
 
-  Computer(super.name, super.price, super.color, this._makerName);
+  @override
+  double weight;
+
+  Computer(super.name, super.price, super.color, this._makerName, this.weight);
 
   @override
   void getName(String name) {

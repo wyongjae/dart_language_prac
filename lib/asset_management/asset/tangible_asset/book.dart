@@ -1,7 +1,7 @@
 import 'package:dart_language_prac/asset_management/asset/tangible_asset/tangible_asset.dart';
 
 void main() {
-  Book book = Book('해리포터', 5000, '파랑', '?');
+  Book book = Book('해리포터', 5000, '파랑', '?', 5);
 
   print(book.name);
   book.getName('반지의 제왕');
@@ -13,7 +13,10 @@ class Book extends TangibleAsset {
 
   String get isbn => _isbn;
 
-  Book(super.name, super.price, super.color, this._isbn);
+  @override
+  double weight;
+
+  Book(super.name, super.price, super.color, this._isbn, this.weight);
 
   @override
   void getColor(String color) {
