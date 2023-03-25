@@ -1,23 +1,23 @@
 import 'package:dart_language_prac/asset_management/asset/asset.dart';
 
 abstract class TangibleAsset extends Asset {
-  final String color;
+  String _color;
 
-  set color(String value) => color = value;
+  String get color => _color;
 
-  TangibleAsset(super.name, super.price, this.color);
+  TangibleAsset(super.name, super.price, this._color);
 
   @override
   void getName(String name) {
-    this.name = name;
+    super.getName(name);
   }
 
   @override
   void getPrice(int price) {
-    this.price = price;
+    super.getPrice(price);
   }
 
   void getColor(String color) {
-    this.color = color;
+    _color = color;
   }
 }

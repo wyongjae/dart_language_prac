@@ -1,18 +1,18 @@
 abstract class Asset {
-  final String name;
-  final int price;
+  String _name;
+  int _price;
 
-  set name(String value) => name = value;
+  String get name => _name;
 
-  set price(int value) => price = value;
+  int get price => _price;
 
-  Asset(this.name, this.price);
+  Asset(this._name, this._price);
 
   void getName(String name) {
-    this.name = name;
+    _name = name;
   }
 
   void getPrice(int price) {
-    this.price = price;
+    _price = price;
   }
 }

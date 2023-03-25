@@ -4,15 +4,16 @@ void main() {
   Computer computer = Computer('데스크탑', 1000000, '검정', '삼성');
 
   print(computer.name);
-  computer.name = '애플';
+  computer.getName('노트북');
+  print(computer.name);
 }
 
 class Computer extends TangibleAsset {
-  final String makerName;
+  String _makerName;
 
-  set makerName(String value) => makerName = value;
+  String get makerName => _makerName;
 
-  Computer(super.name, super.price, super.color, this.makerName);
+  Computer(super.name, super.price, super.color, this._makerName);
 
   @override
   void getName(String name) {
@@ -33,6 +34,6 @@ class Computer extends TangibleAsset {
   }
 
   void getMakerName(String makerName) {
-    this.makerName = makerName;
+    _makerName = makerName;
   }
 }
