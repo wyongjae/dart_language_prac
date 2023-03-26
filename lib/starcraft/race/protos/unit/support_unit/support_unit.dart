@@ -1,35 +1,35 @@
 import 'package:dart_language_prac/starcraft/race/protos/unit/unit.dart';
 
 class SupportUnit extends Unit {
-  SupportUnit(
-    super.hp,
-    super.shield,
-    super.count,
+  SupportUnit({
+    required super.name,
+    required super.hp,
+    required super.shield,
+    required super.speed,
     super.isTrue,
-    super.speed,
-  );
+  });
 
   @override
-  void move(int count) {
+  void move(int speed) {
     // TODO: implement move
-    super.move(count);
+    super.move(speed);
   }
 
   @override
-  void stop(int count) {
+  void stop(int speed) {
     // TODO: implement stop
-    super.stop(count);
+    super.stop(speed);
   }
 
   @override
-  void hold(int count, bool isTrue) {
+  void hold(int speed, bool isTrue) {
     // TODO: implement hold
-    super.hold(count, isTrue);
+    super.hold(speed, isTrue);
   }
 
   @override
-  void patrol(int count, bool isTrue) {
+  void patrol(int speed, bool isTrue) {
     // TODO: implement patrol
-    super.patrol(count, isTrue);
+    super.patrol(speed, isTrue);
   }
 }

@@ -3,5 +3,5 @@ abstract class Magic {
 
   Magic(this.mp);
 
-  void magic(int count);
+  void magic(int mp);
 }

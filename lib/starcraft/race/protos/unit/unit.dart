@@ -1,37 +1,33 @@
 abstract class Unit {
-  final int _speed;
+  String name;
+  int speed;
   int hp;
   int shield;
-  int count; // TODO 수정 필요 ?
-  bool _isTrue;
+  bool isTrue;
 
-  bool get isTrue => _isTrue;
+  Unit({
+    required this.name,
+    required this.hp,
+    required this.shield,
+    required this.speed,
+    this.isTrue = false,
+  });
 
-  int get speed => _speed;
-
-  Unit(
-    this.hp,
-    this.shield,
-    this.count,
-    this._isTrue,
-    this._speed,
-  );
-
-  void move(int count) {
-    this.count = count;
+  void move(int speed) {
+    this.speed = speed;
   }
 
-  void stop(int count) {
-    this.count = count;
+  void stop(int speed) {
+    this.speed = speed;
   }
 
-  void hold(int count, bool isTrue) {
-    this.count = count;
-    _isTrue = isTrue;
+  void hold(int speed, bool isTrue) {
+    this.speed = speed;
+    this.isTrue = isTrue;
   }
 
-  void patrol(int count, bool isTrue) {
-    this.count = count;
-    _isTrue = isTrue;
+  void patrol(int speed, bool isTrue) {
+    this.speed = speed;
+    this.isTrue = isTrue;
   }
 }

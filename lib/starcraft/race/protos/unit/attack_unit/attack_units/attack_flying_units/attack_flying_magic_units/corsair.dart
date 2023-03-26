@@ -6,15 +6,14 @@ class Corsair extends AttackUnit with Flying implements Magic {
   @override
   int mp;
 
-  Corsair(
-    super.hp,
-    super.shield,
-    super.count,
-    super.isTrue,
-    super.speed,
-    super.damage,
-    this.mp,
-  );
+  Corsair({
+    super.name = '커세어',
+    required super.hp,
+    required super.shield,
+    required this.mp,
+    required super.damage,
+    required super.speed,
+  });
 
   @override
   void fly() {
@@ -22,7 +21,7 @@ class Corsair extends AttackUnit with Flying implements Magic {
   }
 
   @override
-  void magic(int count) {
+  void magic(int mp) {
     // TODO: implement magic
   }
 }
