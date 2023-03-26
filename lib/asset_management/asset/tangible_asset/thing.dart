@@ -1,5 +1,3 @@
 abstract class Thing {
-  double weight;
-
-  Thing(this.weight);
+  void setWeight(double weight);
 }

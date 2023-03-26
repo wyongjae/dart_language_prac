@@ -6,13 +6,16 @@ abstract class Asset {
 
   int get price => _price;
 
-  Asset(this._name, this._price);
+  Asset(
+    this._name,
+    this._price,
+  );
 
-  void getName(String name) {
+  void setName(String name) {
     _name = name;
   }
 
-  void getPrice(int price) {
+  void setPrice(int price) {
     _price = price;
   }
 }
