@@ -1,3 +1,3 @@
 abstract class Thing {
-  void setWeight(double weight);
+  set weight(double weight);
 }

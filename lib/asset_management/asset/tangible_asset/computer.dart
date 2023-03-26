@@ -1,15 +1,13 @@
-import 'package:dart_language_prac/asset_management/asset/asset.dart';
-import 'package:dart_language_prac/asset_management/asset/tangible_asset/book.dart';
 import 'package:dart_language_prac/asset_management/asset/tangible_asset/tangible_asset.dart';
 
 void main() {
   Computer computer = Computer('데스크탑', 1000000, '검정', 20, '삼성');
 
-  print(computer.name);
-  computer.setName('노트북');
-  print(computer.name);
+  computer.name = '노트북';
+  computer.price = 50000;
 
-  Book book = Book('해리포터', 5000, '검정', 5, '');
+  print(computer.name);
+  print(computer.price);
 }
 
 class Computer extends TangibleAsset {
@@ -26,29 +24,30 @@ class Computer extends TangibleAsset {
   );
 
   @override
-  void setName(String name) {
-    // TODO: implement getName
-    super.setName(name);
+  set name(String name) {
+    // TODO: implement name
+    super.name = name;
   }
 
   @override
-  void setPrice(int price) {
-    // TODO: implement getPrice
-    super.setPrice(price);
+  set price(int price) {
+    // TODO: implement price
+    super.price = price;
   }
 
   @override
-  void setColor(String color) {
-    // TODO: implement getColor
-    super.setColor(color);
+  set color(String color) {
+    // TODO: implement color
+    super.color = color;
   }
 
   @override
-  void setWeight(double weight) {
-    super.setWeight(weight);
+  set weight(double weight) {
+    // TODO: implement weight
+    super.weight = weight;
   }
 
-  void setMakerName(String makerName) {
+  set makerName(String makerName) {
     _makerName = makerName;
   }
 }

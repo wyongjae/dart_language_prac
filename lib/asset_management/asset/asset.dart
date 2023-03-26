@@ -11,11 +11,11 @@ abstract class Asset {
     this._price,
   );
 
-  void setName(String name) {
+  set name(String name) {
     _name = name;
   }
 
-  void setPrice(int price) {
+  set price(int price) {
     _price = price;
   }
 }

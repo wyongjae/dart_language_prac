@@ -17,12 +17,13 @@ abstract class TangibleAsset extends Asset implements Thing {
     this._weight,
   );
 
-  void setColor(String color) {
+  set color(String color) {
     _color = color;
   }
 
   @override
-  void setWeight(double weight) {
+  set weight(double weight) {
+    // TODO: implement weight
     _weight = weight;
   }
 }
