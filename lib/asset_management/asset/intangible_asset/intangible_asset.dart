@@ -5,14 +5,4 @@ abstract class IntangibleAsset extends Asset {
     super.name,
     super.price,
   );
-
-  @override
-  void getName(String name) {
-    name = this.name;
-  }
-
-  @override
-  void getPrice(int price) {
-    price = this.price;
-  }
 }
