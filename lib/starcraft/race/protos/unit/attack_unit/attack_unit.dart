@@ -1,6 +1,7 @@
-import 'package:dart_language_prac/starcraft/race/protos/unit/unit.dart';
+import 'package:dart_language_prac/starcraft/race/protos/protos_unit.dart';
+import 'package:dart_language_prac/starcraft/race/unit.dart';
 
-class AttackUnit extends Unit {
+class AttackUnit extends ProtosUnit {
   int damage;
 
   AttackUnit({

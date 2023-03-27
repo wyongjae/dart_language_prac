@@ -1,12 +1,11 @@
-import 'package:dart_language_prac/starcraft/race/protos/unit/unit.dart';
+import 'package:dart_language_prac/starcraft/race/protos/protos_unit.dart';
 
-class SupportUnit extends Unit {
+class SupportUnit extends ProtosUnit {
   SupportUnit({
     required super.name,
     required super.hp,
     required super.shield,
     required super.speed,
-    super.isTrue,
   });
 
   @override

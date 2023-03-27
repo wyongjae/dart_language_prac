@@ -2,13 +2,11 @@ abstract class Unit {
   String name;
   int speed;
   int hp;
-  int shield;
   bool isTrue;
 
   Unit({
     required this.name,
     required this.hp,
-    required this.shield,
     required this.speed,
     this.isTrue = false,
   });

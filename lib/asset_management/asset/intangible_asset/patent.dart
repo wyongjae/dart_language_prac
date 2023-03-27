@@ -5,16 +5,4 @@ class Patent extends IntangibleAsset {
     super.name,
     super.price,
   );
-
-  @override
-  set name(String name) {
-    // TODO: implement getName
-    super.name = name;
-  }
-
-  @override
-  set price(int price) {
-    // TODO: implement getPrice
-    super.price = price;
-  }
 }

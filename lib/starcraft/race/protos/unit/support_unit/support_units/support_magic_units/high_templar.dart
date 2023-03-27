@@ -1,4 +1,4 @@
-import 'package:dart_language_prac/starcraft/race/protos/unit/magic.dart';
+import 'package:dart_language_prac/starcraft/race/magic.dart';
 import 'package:dart_language_prac/starcraft/race/protos/unit/support_unit/support_unit.dart';
 
 class HighTemplar extends SupportUnit implements Magic {

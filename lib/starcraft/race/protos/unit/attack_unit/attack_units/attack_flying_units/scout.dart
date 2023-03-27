@@ -1,5 +1,5 @@
 import 'package:dart_language_prac/starcraft/race/protos/unit/attack_unit/attack_unit.dart';
-import 'package:dart_language_prac/starcraft/race/protos/unit/flying.dart';
+import 'package:dart_language_prac/starcraft/race/flying.dart';
 
 class Scout extends AttackUnit with Flying {
   Scout({

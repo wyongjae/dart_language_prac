@@ -1,6 +1,6 @@
 abstract class Asset {
-  String _name;
-  int _price;
+  final String _name;
+  final int _price;
 
   String get name => _name;
 
@@ -10,12 +10,4 @@ abstract class Asset {
     this._name,
     this._price,
   );
-
-  set name(String name) {
-    _name = name;
-  }
-
-  set price(int price) {
-    _price = price;
-  }
 }
