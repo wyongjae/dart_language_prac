@@ -1,5 +1,3 @@
-
-
 void main() {
   StrongBox strongBox1 = StrongBox(KeyType.test);
   StrongBox strongBox2 = StrongBox(KeyType.padlock);
