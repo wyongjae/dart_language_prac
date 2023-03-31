@@ -14,7 +14,7 @@ void main() {
 
 enum KeyType { test, padlock, button, dial, finger }
 
-class StrongBox {
+class StrongBox<E> {
   KeyType keyType;
   int test = 5;
   int padlock = 1024;
@@ -24,7 +24,7 @@ class StrongBox {
 
   StrongBox(this.keyType);
 
-  void put(KeyType keyType) {
+  void put (KeyType keyType) {
     this.keyType = keyType;
   }
 

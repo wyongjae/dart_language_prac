@@ -10,20 +10,27 @@ void main() {
     print('"---- stack trace (여기까지) ---- "');
   }
 
+  void exception() {
+    throw Exception('Exception');
+  }
+
+  // Unhandled exception:
+  // FormatException: Invalid radix-10 number (at character 1)
+  // 문자열을 정수로 구문 분석할 때 발생
+
   String text = 'Three';
   void parseInt() {
+    int.tryParse(text);
+    print('tryParse 호출');
+
     try {
       int i = int.parse(text.replaceAll(RegExp(r'[^0-9]'), ''));
 
       print(i);
     } catch (e) {
-      print('숫자가 없습니다');
+      exception();
     }
   }
 
   parseInt();
-
-  // Unhandled exception:
-  // FormatException: Invalid radix-10 number (at character 1)
-  // 문자열을 정수로 구문 분석할 때 발생
 }
