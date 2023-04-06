@@ -41,6 +41,7 @@ void main() {
     int tries;
 
     for (tries = 1; tries <= 100000; tries++) {
+      // -1 ~ 1 의 실수
       double x = Random().nextDouble() * 2 - 1;
       double y = Random().nextDouble() * 2 - 1;
 
